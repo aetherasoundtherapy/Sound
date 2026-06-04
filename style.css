@@ -26,19 +26,12 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 240px; /* Wider sizing so the text within your logo reads clearly */
+    max-width: 85vw; /* Keeps it perfectly proportioned on mobile screens */
     margin-bottom: 25px;
     opacity: 0.9;
     /* Gentle floating animation right at the start */
     animation: floatLogo 5s ease-in-out infinite;
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-weight: 300;
-    letter-spacing: 10px;
-    margin-bottom: 20px;
-    color: #1a1a19;
 }
 
 .tagline {
@@ -193,7 +186,6 @@ html {
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 2.2rem; letter-spacing: 5px; }
     .tagline { font-size: 0.9rem; }
     .section { padding: 60px 20px; }
     .card { width: 100%; }
