@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Luxury Calming Palette: Soft Alabaster Cream & Charcoal Text */
+    background: #fcfbfa; 
+    color: #2b2a27;
+    font-family: Georgia, serif;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #f5f3ef, #fcfbfa);
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    /* Gentle floating animation right at the start */
+    animation: floatLogo 5s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    color: #1a1a19;
+}
+
+.tagline {
+    color: #b59a57; /* Muted Champagne Gold */
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 36px;
+    border: 1px solid #b59a57;
+    color: #b59a57;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background: #b59a57;
+    color: #fcfbfa;
+    box-shadow: 0 10px 20px rgba(181, 154, 87, 0.15);
+}
+
+.section {
+    max-width: 800px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #b59a57;
+}
+
+/* Image Styling for Singing Bowls */
+.image-gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.healing-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    opacity: 0.95;
+    transition: opacity 0.5s ease;
+}
+
+.healing-image:hover {
+    opacity: 1;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    border: 1px solid rgba(181, 154, 87, 0.2);
+    background: #ffffff;
+    padding: 35px 25px;
+    min-width: 220px;
+    flex: 1;
+    letter-spacing: 1px;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(181, 154, 87, 0.6);
+    box-shadow: 0 10px 25px rgba(181, 154, 87, 0.08);
+}
+
+/* --- GOOGLE FORM EMBED STYLES --- */
+.booking-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 80px 20px;
+    background: #f7f5f0; 
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.01);
+}
+
+.booking-sub {
+    margin-bottom: 40px;
+    color: #615f5a;
+    font-style: italic;
+}
+
+.form-wrapper {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid rgba(181, 154, 87, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+.email {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+footer {
+    padding: 60px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(181, 154, 87, 0.1);
+    background: #f5f3ef;
+}
+
+/* --- JAVASCRIPT REVEAL STYLES --- */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- LOGO FLOAT ANIMATION --- */
+@keyframes floatLogo {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; letter-spacing: 5px; }
+    .tagline { font-size: 0.9rem; }
+    .section { padding: 60px 20px; }
+    .card { width: 100%; }
+}
