@@ -1,24 +1,16 @@
-// Wait for the webpage to fully load
+// Handles interactive layout and smooth behaviors
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Æthera application interface initialized successfully.");
     
-    // Find every section labeled with 'reveal-item'
-    const itemsToReveal = document.querySelectorAll('.reveal-item');
-    
-    const revealOnScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85; // Triggers when element is 85% down screen
-        
-        itemsToReveal.forEach(item => {
-            const itemTop = item.getBoundingClientRect().top;
-            
-            if(itemTop < triggerBottom) {
-                item.classList.add('active');
+    // Smooth scrolling link behavior for the booking button
+    const bookingButton = document.querySelector('a[href="#booking"]');
+    if (bookingButton) {
+        bookingButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.getElementById('booking');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
-    };
-    
-    // Run once immediately on load so the top hero content reveals right away
-    revealOnScroll();
-    
-    // Listen for scroll events to fade elements in as you move down the page
-    window.addEventListener('scroll', revealOnScroll);
+    }
 });
