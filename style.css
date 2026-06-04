@@ -1,192 +1,239 @@
+/* THE EXACT LOVABLE LUXURY DESIGN SYSTEM */
+:root {
+    --bg-app: #f5f2eb;          /* Premium warm linen cream */
+    --text-primary: #2d2b27;    /* Elegant charcoal brown */
+    --text-muted: #6b665f;      /* Muted earth tone */
+    --accent-gold: #c4af85;     /* Champagne Gold */
+    --card-surface: #ffffff;    /* Solid white frames */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    /* Luxury Calming Palette: Soft Alabaster Cream & Charcoal Text */
-    background: #fcfbfa; 
-    color: #2b2a27;
-    font-family: Georgia, serif;
-    text-align: center;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-    overflow-x: hidden;
+html, body {
+    background-color: var(--bg-app) !important;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-.hero {
-    min-height: 100vh;
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero / Header Section */
+.hero-section {
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
-    background: linear-gradient(to bottom, #f5f3ef, #fcfbfa);
+    text-align: center;
+    padding: 80px 20px;
 }
 
-.logo {
-    width: 240px; /* Wider sizing so the text within your logo reads clearly */
-    max-width: 85vw; /* Keeps it perfectly proportioned on mobile screens */
-    margin-bottom: 25px;
-    opacity: 0.9;
-    /* Gentle floating animation right at the start */
-    animation: floatLogo 5s ease-in-out infinite;
+.logo-container {
+    margin-bottom: 24px;
 }
 
-.tagline {
-    color: #b59a57; /* Muted Champagne Gold */
-    font-size: 1.1rem;
-    letter-spacing: 2px;
+.app-logo {
+    width: 250px;
+    max-width: 85vw;
+    height: auto;
+    animation: smoothFloat 6s ease-in-out infinite;
+}
+
+.app-tagline {
+    font-family: var(--font-serif);
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    font-style: italic;
+    letter-spacing: 0.5px;
     margin-bottom: 40px;
-    text-transform: uppercase;
+    max-width: 600px;
 }
 
-.button {
+.cta-button {
     display: inline-block;
-    padding: 16px 36px;
-    border: 1px solid #b59a57;
-    color: #b59a57;
+    padding: 14px 38px;
+    border: 1px solid var(--accent-gold);
+    color: var(--text-primary);
+    background: transparent;
+    border-radius: 50px;
     text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    transition: all 0.5s ease;
-}
-
-.button:hover {
-    background: #b59a57;
-    color: #fcfbfa;
-    box-shadow: 0 10px 20px rgba(181, 154, 87, 0.15);
-}
-
-.section {
-    max-width: 800px;
-    margin: auto;
-    padding: 100px 20px;
-}
-
-.section h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    color: #b59a57;
-}
-
-/* Image Styling for Singing Bowls */
-.image-gallery {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.healing-image {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 4px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-    opacity: 0.95;
-    transition: opacity 0.5s ease;
-}
-
-.healing-image:hover {
-    opacity: 1;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.card {
-    border: 1px solid rgba(181, 154, 87, 0.2);
-    background: #ffffff;
-    padding: 35px 25px;
-    min-width: 220px;
-    flex: 1;
-    letter-spacing: 1px;
-    font-size: 1.05rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
     transition: all 0.4s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(181, 154, 87, 0.6);
-    box-shadow: 0 10px 25px rgba(181, 154, 87, 0.08);
+.cta-button:hover {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-app);
+    transform: translateY(-2px);
 }
 
-/* --- GOOGLE FORM EMBED STYLES --- */
-.booking-container {
+/* Section Layouts */
+.app-section {
+    padding: 100px 0;
+    text-align: center;
     max-width: 800px;
-    margin: 60px auto;
-    padding: 80px 20px;
-    background: #f7f5f0; 
-    border-radius: 8px;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.01);
+    margin: 0 auto;
 }
 
-.booking-sub {
-    margin-bottom: 40px;
-    color: #615f5a;
-    font-style: italic;
+.section-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+    margin-bottom: 16px;
 }
 
-.form-wrapper {
-    background: #ffffff;
-    padding: 10px;
-    border: 1px solid rgba(181, 154, 87, 0.15);
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.6rem;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.section-desc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Singing Bowl Image Frame */
+.image-section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.editorial-frame {
+    border-radius: 24px;
     overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+    aspect-ratio: 16 / 9;
+    max-height: 550px;
 }
 
-.email {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+.display-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-footer {
-    padding: 60px 20px;
+/* Grid Cards */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.benefit-card {
+    background: var(--card-surface);
+    border: 1px solid rgba(196, 175, 133, 0.15);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: left;
+    transition: transform 0.4s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-gold);
+}
+
+.card-num {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Beautiful Form Wrapper */
+.form-card-container {
+    background: var(--card-surface);
+    border-radius: 24px;
+    padding: 60px 40px;
+    border: 1px solid rgba(196, 175, 133, 0.15);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.01);
+}
+
+.embedded-form-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+    border: 1px solid #e2ded5;
+}
+
+/* Metadata Details */
+.metadata-section {
+    border-top: 1px solid rgba(196, 175, 133, 0.2);
+    padding-top: 60px;
+}
+
+.metadata-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+}
+
+.meta-block h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+}
+
+.meta-block p {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+}
+
+.meta-sub {
     font-size: 0.9rem;
-    letter-spacing: 1px;
-    opacity: 0.6;
-    border-top: 1px solid rgba(181, 154, 87, 0.1);
-    background: #f5f3ef;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 4px;
 }
 
-/* --- JAVASCRIPT REVEAL STYLES --- */
-.reveal-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
-                transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+.app-footer {
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
 }
 
-.reveal-item.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- LOGO FLOAT ANIMATION --- */
-@keyframes floatLogo {
+@keyframes smoothFloat {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(-6px); }
     100% { transform: translateY(0px); }
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 @media (max-width: 768px) {
-    .tagline { font-size: 0.9rem; }
-    .section { padding: 60px 20px; }
-    .card { width: 100%; }
+    .section-title { font-size: 2.1rem; }
+    .metadata-grid { grid-template-columns: 1fr; gap: 30px; }
+    .form-card-container { padding: 30px 16px; }
 }
